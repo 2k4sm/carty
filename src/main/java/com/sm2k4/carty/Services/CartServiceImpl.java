@@ -3,6 +3,8 @@ package com.sm2k4.carty.Services;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -73,5 +75,14 @@ public class CartServiceImpl implements CartService {
         CartDTO newCreatedCart = this.restTemplate.postForObject(URL, newCart, CartDTO.class);
 
         return newCreatedCart;
+    }
+
+    public CartDTO updateCart(int id, CartDTO updateCart) {
+        String URL = BaseURL + String.format("/%s", id);
+
+        CartDTO updatedCart = this.restTemplate.exchange(URL, HttpMethod.PUT, new HttpEntity<>(updateCart),
+                CartDTO.class).getBody();
+
+        return updatedCart;
     }
 }

@@ -14,4 +14,6 @@ public interface CartService {
     public List<CartDTO> getCartsByUserId(int id);
 
     public CartDTO createCart(CartDTO newCart);
+
+    public CartDTO updateCart(int id, CartDTO updateCart);
 }
