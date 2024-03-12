@@ -56,7 +56,7 @@ public class CartServiceImpl implements CartService {
     }
 
     public List<CartDTO> getCartsByUserId(int id) {
-        String URL = BaseURL + String.format("/user/%s", id);
+        String URL = BaseURL + String.format("/user/%d", id);
 
         CartDTO[] cartsByUser = this.restTemplate.getForObject(URL, CartDTO[].class);
 
@@ -78,11 +78,19 @@ public class CartServiceImpl implements CartService {
     }
 
     public CartDTO updateCart(int id, CartDTO updateCart) {
-        String URL = BaseURL + String.format("/%s", id);
+        String URL = BaseURL + String.format("/%d", id);
 
         CartDTO updatedCart = this.restTemplate.exchange(URL, HttpMethod.PUT, new HttpEntity<>(updateCart),
                 CartDTO.class).getBody();
 
         return updatedCart;
+    }
+
+    public CartDTO deleteCart(int id) {
+        String URL = BaseURL + String.format("/%d", id);
+
+        CartDTO deletedCart = this.restTemplate.exchange(URL, HttpMethod.DELETE, null, CartDTO.class).getBody();
+
+        return deletedCart;
     }
 }

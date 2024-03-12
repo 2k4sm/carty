@@ -16,4 +16,6 @@ public interface CartService {
     public CartDTO createCart(CartDTO newCart);
 
     public CartDTO updateCart(int id, CartDTO updateCart);
+
+    public CartDTO deleteCart(int id);
 }
