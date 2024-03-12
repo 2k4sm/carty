@@ -12,4 +12,6 @@ public interface CartService {
     public List<CartDTO> getCartsFilterByDate(String startdate, String enddate);
 
     public List<CartDTO> getCartsByUserId(int id);
+
+    public CartDTO createCart(CartDTO newCart);
 }

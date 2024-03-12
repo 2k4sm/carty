@@ -66,4 +66,12 @@ public class CartServiceImpl implements CartService {
 
         return cartsByUserList;
     }
+
+    public CartDTO createCart(CartDTO newCart) {
+        String URL = BaseURL;
+
+        CartDTO newCreatedCart = this.restTemplate.postForObject(URL, newCart, CartDTO.class);
+
+        return newCreatedCart;
+    }
 }
