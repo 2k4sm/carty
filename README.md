@@ -50,7 +50,7 @@ A cart service API made using spring boot.
 
 ### GET all carts filtered by date.
 
-- GET [/carts/filter?startdate=2019-10-24&enddate=2023-12-24](http://localhost:8080/carts/filter?startdate=2020-03-01&enddate=2020-03-01)
+- GET [/carts/filter?startdate=2020-03-01&enddate=2020-03-01](http://localhost:8080/carts/filter?startdate=2020-03-01&enddate=2020-03-01)
 
     ![image](https://github.com/2k4sm/carty/assets/101013814/b4fad5b4-71f6-46ac-b929-5bff6dcf682d)
 
