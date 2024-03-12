@@ -36,7 +36,7 @@ public class CartController {
         return ResponseEntity.ok(cartById);
     }
 
-    @GetMapping("/date")
+    @GetMapping("/filter")
     public ResponseEntity<List<CartDTO>> getCartsFilterByDate(@RequestParam("startdate") String startdate,
             @RequestParam("enddate") String enddate) {
 
