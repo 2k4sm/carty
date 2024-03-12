@@ -20,21 +20,23 @@ A cart service API made using spring boot.
 - To Run the Server
 
 
-        ./mvnw clean spring-boot:run
-
-- For Developing
-
-    - Compile Using.
+  - Compile Using.
 
         
             ./mvnw clean package
     
-    - Run the Server Using
+  - Run the Server Using
 
 
             java -jar target/carty-0.0.1-SNAPSHOT.jar
 
 
+
+
+
+- For Developing
+
+            ./mvnw clean spring-boot:run
 
 ## API Endpoints
 
