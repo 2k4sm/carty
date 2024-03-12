@@ -20,7 +20,7 @@ import com.sm2k4.carty.Services.CartService;
 @RequestMapping("/carts")
 public class CartController {
 
-    private CartService cartService;
+    private final CartService cartService;
 
     public CartController(CartService cartService) {
         this.cartService = cartService;

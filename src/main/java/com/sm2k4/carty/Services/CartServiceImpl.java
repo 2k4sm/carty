@@ -13,7 +13,7 @@ import com.sm2k4.carty.DTOs.CartDTO;
 @Service
 public class CartServiceImpl implements CartService {
 
-    private RestTemplate restTemplate;
+    private final RestTemplate restTemplate;
     private final String BaseURL = "https://fakestoreapi.com/carts";
 
     public CartServiceImpl() {
