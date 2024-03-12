@@ -46,4 +46,12 @@ public class CartController {
 
     }
 
+    @GetMapping("/user/{id}")
+    public ResponseEntity<List<CartDTO>> getCartsByUserId(@PathVariable int id) {
+
+        List<CartDTO> cartsByUser = this.cartService.getCartsByUserId(id);
+
+        return ResponseEntity.ok(cartsByUser);
+    }
+
 }

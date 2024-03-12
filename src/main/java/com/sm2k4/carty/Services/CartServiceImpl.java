@@ -52,4 +52,18 @@ public class CartServiceImpl implements CartService {
 
         return cartsFilterByDateList;
     }
+
+    public List<CartDTO> getCartsByUserId(int id) {
+        String URL = BaseURL + String.format("/user/%s", id);
+
+        CartDTO[] cartsByUser = this.restTemplate.getForObject(URL, CartDTO[].class);
+
+        List<CartDTO> cartsByUserList = new ArrayList<>();
+
+        for (CartDTO cart : cartsByUser) {
+            cartsByUserList.add(cart);
+        }
+
+        return cartsByUserList;
+    }
 }

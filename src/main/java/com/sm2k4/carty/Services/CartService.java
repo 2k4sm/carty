@@ -10,4 +10,6 @@ public interface CartService {
     public CartDTO getCartById(int id);
 
     public List<CartDTO> getCartsFilterByDate(String startdate, String enddate);
+
+    public List<CartDTO> getCartsByUserId(int id);
 }
