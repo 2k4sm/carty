@@ -14,7 +14,7 @@ import com.sm2k4.carty.DTOs.CartDTO;
 public class CartServiceImpl implements CartService {
 
     private RestTemplate restTemplate;
-    private String BaseURL = "https://fakestoreapi.com/carts";
+    private final String BaseURL = "https://fakestoreapi.com/carts";
 
     public CartServiceImpl() {
         this.restTemplate = new RestTemplate();
