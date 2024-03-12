@@ -6,5 +6,8 @@ import com.sm2k4.carty.DTOs.CartDTO;
 
 public interface CartService {
     public List<CartDTO> getAllCarts();
+
     public CartDTO getCartById(int id);
+
+    public List<CartDTO> getCartsFilterByDate(String startdate, String enddate);
 }

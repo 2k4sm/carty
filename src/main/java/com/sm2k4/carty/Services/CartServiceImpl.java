@@ -39,4 +39,17 @@ public class CartServiceImpl implements CartService {
 
         return cartById;
     }
+
+    public List<CartDTO> getCartsFilterByDate(String startdate, String enddate) {
+        String URL = BaseURL + String.format("?startdate=%s&enddate=%s", startdate, enddate);
+
+        CartDTO[] cartsFilterByDate = this.restTemplate.getForObject(URL, CartDTO[].class);
+        List<CartDTO> cartsFilterByDateList = new ArrayList<>();
+
+        for (CartDTO cartByDate : cartsFilterByDate) {
+            cartsFilterByDateList.add(cartByDate);
+        }
+
+        return cartsFilterByDateList;
+    }
 }
